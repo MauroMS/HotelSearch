@@ -7,7 +7,7 @@ export const environment = {
 };
 
 export const apiUrls = {
-  getHotel: 'http://localhost:49320/api/Hotel/'
+  getHotel: '/api/Hotel/'
 }
 
 /*
