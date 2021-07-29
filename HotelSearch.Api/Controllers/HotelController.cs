@@ -23,7 +23,6 @@ namespace HotelSearch.Api.Controllers
         /// <param name="name"></param>
         /// <param name="rating"></param>
         /// <param name="onlyAvailable"></param>
-        /// <param name="sortOrder"></param>
         /// <returns>List of Hotels unfiltered/Filtered</returns>
         [HttpGet]
         public ActionResult<IList<HotelViewModel>> Get(string name, int rating, bool onlyAvailable = true)
