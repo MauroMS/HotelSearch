@@ -30,16 +30,16 @@ use your answer as an opportunity to explain what you would add).**
 	I ended up spending more time where I wasn't expecting to, like preloading the data and some problems with AutoMapper/Angular Material.
 	Back-end:
 		* I would have added proper loggin and exception handling.
+		* I would have moved the sort to the back-end.
+		* Improved the query/filter system with OData
 		* More tests.
-		* I was planning to deploy my app to a AppService on Azure if I had more time.
-		* Improved the query/filter system.
-		* I would have moved the sort to the back-end as well.
-		* When I started reading the excercise and saw I had 1 week to send, I was planning to do the backend part as Serverless app on Azure, but then I saw the recommendation to spend just a few hours on it.
-		* 
+		* I was planning to deploy my app to an Azure AppService if I had more time. 
+		* When I started reading the excercise and saw I had 1 week to send, I was planning to do the backend part as Azure Serverless functions, but then I saw the recommendation to spend just a few hours on it.
 	Front-end:
-		* I would have created a Resolver to preload the Hotel data.
+		* I would have created a Resolver to preload the Hotel data and display a nice loading page while waiting the the data.
 		* More unit tests and e2e.
-		* Separated modules per Component. 
+		* Separated modules per Component.
+		* I would have spend a bit more time on scss as well, to make the page/grid looks nicer.
 
 **2. Describe the tooling / libraries / packages you chose to use for your development process and the
 reasons why.**
