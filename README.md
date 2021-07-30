@@ -47,12 +47,12 @@ reasons why.**
 	##### Tools:
 	Visual Studio 2019 - Best tool for back-end work in my opinion.
 	VsCode - The best editor I have used for Angular/Typescript, lightweight and very fast, also filled with a lot of very useful extensions.
-	Angular Cli - Very easy and quick to bootstrap an Angular project from the scratch.
+	Angular Cli - It does a great job bootstraping an Angular project from the scratch, so you don't need to setup all initial packages by yourself.
 
 	##### Libraries:
 	Angular Material - Angular implementation of material.io, it has loads of components ready to use. It also supports custom theming and accessibility. I used for a quick way to get a nice looking grid to display data and also to display the star rating (material icons).
 	rxjs - Must have library to work with asynchronous and event-based calls by using Observables.
-	TestBed - for angular testing
+	TestBed - My preference is Jest, but as I'm not that familiar with it and the time was short, I decided to use the one already configured by default.
 
 	##### Packages:
 	Swagger - I consider swagger very easy to setup and you can easily test your API during development
@@ -65,10 +65,13 @@ reasons why.**
 **3. Describe how this solution would be deployed and run in your chosen cloud provider and any impact
 this may have on its development.**
 
-	It would be integrated with Azure DevOps. So as soon as the Pull Request passes the tests and gets approved by the reviewers, the changes would be merged with the Main branch and this would trigger the automated deployment to a Dev AppService on Azure.
+	* It would be integrated with Azure DevOps. So as soon as the Pull Request passes the tests and gets approved by the reviewers, the changes would be merged with the Main branch and this would trigger the automated deployment to a Dev AppService on Azure.
 	Then you would be able to access API (/api) and UI via the same Url.
 
-	The first change I would make, is to properly setup CORS as I have disabled on my API.
+	* The first change I would make, is to properly setup CORS as I have disabled on my API.
+	* Use a real database so the application would be able to increase the Scalability of the app without relying on the "inMemoryBd"
+	* Api Methods to return Async
+	* More logs and exception handling to be able to properly track issues
 
 
 **4. If the application was enhanced to contain business sensitive data what considerations and possible
