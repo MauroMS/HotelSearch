@@ -11,10 +11,10 @@ import { MatSort } from '@angular/material/sort';
 
 @Component({
   selector: 'app-search',
-  templateUrl: './search.component.html',
-  styleUrls: ['./search.component.scss'],
+  templateUrl: './hotel.component.html',
+  styleUrls: ['./hotel.component.scss'],
 })
-export class SearchComponent implements OnInit, OnDestroy {
+export class HotelComponent implements OnInit, OnDestroy {
   sub: Subscription;
   hotels = new MatTableDataSource<Hotel>();
   displayedColumns = ['name', 'description', 'location', 'rating'];

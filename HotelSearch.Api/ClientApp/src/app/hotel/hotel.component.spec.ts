@@ -12,13 +12,13 @@ import { of } from 'rxjs';
 import { Filter } from '../models/filter';
 import { RatingComponent } from '../rating/rating.component';
 import { HotelService } from '../services/hotel.service';
-import { SearchComponent } from './search.component';
+import { HotelComponent } from './hotel.component';
 
-describe('SearchComponent', () => {
-  let component: SearchComponent;
+describe('HotelComponent', () => {
+  let component: HotelComponent;
   let mockHotelService;
   let filter: Filter;
-  let fixture: ComponentFixture<SearchComponent>;
+  let fixture: ComponentFixture<HotelComponent>;
   let availableHotels = [
     {
       "id": 2,
@@ -113,7 +113,7 @@ describe('SearchComponent', () => {
   beforeEach(() => {
     mockHotelService = jasmine.createSpyObj(['getAllAvailableHotels', 'handleError']);
     mockHotelService.getAllAvailableHotels.and.returnValue(of(availableHotels));
-    component = new SearchComponent(mockHotelService);
+    component = new HotelComponent(mockHotelService);
   });
 
   describe('Get All Hotels', () => {
@@ -146,7 +146,7 @@ describe('SearchComponent', () => {
     beforeEach(async () => {
       await TestBed
         .configureTestingModule({
-          declarations: [SearchComponent, RatingComponent],
+          declarations: [HotelComponent, RatingComponent],
           providers: [
             { provide: HotelService, useValue: mockHotelService },
           ],
@@ -167,7 +167,7 @@ describe('SearchComponent', () => {
     });
 
     beforeEach(() => {
-      fixture = TestBed.createComponent(SearchComponent);
+      fixture = TestBed.createComponent(HotelComponent);
       component = fixture.componentInstance;
       fixture.detectChanges();
     });

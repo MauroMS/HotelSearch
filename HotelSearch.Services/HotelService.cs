@@ -40,5 +40,22 @@ namespace HotelSearch.Services
                 throw;
             }
         }
+
+        public HotelViewModel GetHotelById(int id)
+        {
+            try
+            {
+                var hotel = _hotelRepository.GetHotelById(id);
+                if (hotel != null)
+                    return _mapper.Map<HotelViewModel>(hotel);
+
+                return null;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message);
+                throw;
+            }
+        }
     }
 }

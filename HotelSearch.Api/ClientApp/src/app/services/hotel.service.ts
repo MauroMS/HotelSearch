@@ -28,6 +28,14 @@ export class HotelService {
     )
   }
 
+  getHotelById(id: number): Observable<Hotel> {
+    let url = apiUrls.getHotel + id;
+
+    return this.httpClient.get<Hotel>(url).pipe(
+      catchError(this.handleError)
+    )
+  }
+
   handleError(handleError: HttpErrorResponse) {
     return throwError(handleError);
   }
