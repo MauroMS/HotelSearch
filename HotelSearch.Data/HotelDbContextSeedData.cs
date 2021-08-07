@@ -19,14 +19,14 @@ namespace HotelSearch.Data
             _context = context;
         }
 
-        public async void SeedHotels(string path)
+        public void SeedHotels(string path)
         {
-            var hotelsJson = File.ReadAllText($"{path}\\hotels.json");
+            var hotelsJson = File.ReadAllText(Path.Combine(path,"hotels.json"));
             var hotels = JsonSerializer.Deserialize<List<Hotel>>(hotelsJson);
 
             _context.AddRange(hotels);
 
-            await _context.SaveChangesAsync();
+            _context.SaveChanges();
         }
     }
 }
