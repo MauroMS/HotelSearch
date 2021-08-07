@@ -1,16 +1,25 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SearchComponent } from './search/search.component';
+import { HotelDetailsComponent } from './hotel/hotel-details/hotel-details.component';
+import { HotelComponent } from './hotel/hotel.component';
+import { HotelResolver } from './hotel/hotel.resolver';
 
 const routes: Routes = [
   {
-    path: '',
-    pathMatch: 'full',
-    redirectTo: '/search'
+    path: 'hotel/:id',
+    component: HotelDetailsComponent,
+    resolve: {
+      hotel: HotelResolver
+    }
   },
   {
-    path: 'search',
-    component: SearchComponent
+    path: '',
+    pathMatch: 'full',
+    redirectTo: '/hotel'
+  },
+  {
+    path: 'hotel',
+    component: HotelComponent
   }
 ];
 

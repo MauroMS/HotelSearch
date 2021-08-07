@@ -37,5 +37,29 @@ namespace HotelSearch.Api.Controllers
                 return BadRequest(ex.InnerException);
             }            
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Get single Hotel by Id</returns>
+        [HttpGet]
+        [Route("{id:int}")]
+        public ActionResult<HotelViewModel> Get(int id)
+        {
+            try
+            {
+                var hotel = _hotelService.GetHotelById(id);
+                
+                if(hotel != null)
+                    return Ok(hotel);
+
+                return NotFound();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.InnerException);
+            }
+        }
     }
 }

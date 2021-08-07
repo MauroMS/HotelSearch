@@ -70,7 +70,6 @@ this may have on its development.**
 
 	* The first change I would make, is to properly setup CORS as I have disabled on my API.
 	* Use a real database so the application would be able to increase the Scalability of the app without relying on the "inMemoryBd"
-	* Api Methods to return Async
 	* More logs and exception handling to be able to properly track issues
 
 

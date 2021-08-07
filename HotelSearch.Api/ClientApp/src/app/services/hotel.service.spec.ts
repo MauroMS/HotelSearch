@@ -3,7 +3,6 @@ import { HttpClientTestingModule, HttpTestingController } from '@angular/common/
 import { HotelService } from './hotel.service';
 import { apiUrls } from 'src/environments/environment';
 import { Filter } from '../models/filter';
-import { of, throwError } from 'rxjs';
 import { Hotel } from '../models/hotel';
 
 describe('HotelService', () => {

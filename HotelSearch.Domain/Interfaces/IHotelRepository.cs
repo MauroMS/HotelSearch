@@ -6,5 +6,6 @@ namespace HotelSearch.Domain
     public interface IHotelRepository
     {
         IList<Hotel> GetHotels(HotelFilter filter = null);
+        Hotel GetHotelById(int id);
     }
 }

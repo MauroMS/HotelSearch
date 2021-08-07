@@ -1,0 +1,9 @@
+<div class="searchBody">
+  <button mat-raised-button [routerLink]="['/hotel']">Back</button>
+  <ng-container *ngIf="hotel.id === 0">
+    <h2>Create New Hotel</h2>
+  </ng-container>
+  <ng-container *ngIf="hotel.id !== 0">
+    <h2>Hotel {{hotel.name}}</h2>
+  </ng-container>
+</div>

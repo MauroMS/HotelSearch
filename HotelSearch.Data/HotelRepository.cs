@@ -14,6 +14,11 @@ namespace HotelSearch.Data
             _hotelDbContext = hotelDbContext;
         }
 
+        public Hotel GetHotelById(int id)
+        {
+            return _hotelDbContext.Hotels.Where(h => h.Id == id).FirstOrDefault();
+        }
+
         public IList<Hotel> GetHotels(HotelFilter filter = null)
         {
             if (filter == null)
