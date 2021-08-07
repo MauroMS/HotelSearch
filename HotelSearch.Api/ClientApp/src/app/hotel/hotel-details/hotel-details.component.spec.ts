@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 
 import { HotelDetailsComponent } from './hotel-details.component';
 
@@ -8,15 +9,27 @@ describe('HotelDetailsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HotelDetailsComponent ]
+      declarations: [HotelDetailsComponent],
+      imports: [
+        RouterModule.forRoot([]),
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
-  beforeEach(() => {
+  beforeEach(async () => {
     fixture = TestBed.createComponent(HotelDetailsComponent);
+    fixture.componentInstance.hotel =
+    {
+      id: 0,
+      description: '',
+      isAvailable: 0,
+      location: '',
+      name: '',
+      rating: 0
+    };
     component = fixture.componentInstance;
-    fixture.detectChanges();
+    await fixture.whenStable();
   });
 
   it('should create', () => {

@@ -1,4 +1,6 @@
-<ng-container *ngIf="stars === 0">All Ratings</ng-container>
+<ng-container *ngIf="stars === 0">
+  <label id="allRatingsText">All Ratings</label>
+</ng-container>
 <ng-container *ngFor="let item of [].constructor(stars)">
-  <mat-icon color="accent">star</mat-icon>
+  <mat-icon color="accent" id="starsIcon">star</mat-icon>
 </ng-container>
